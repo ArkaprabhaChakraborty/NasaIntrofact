@@ -15,6 +15,7 @@ def page():
     return render_template("layout.html", image = image,ex = ex)
 @app.route("/earth",methods = ['GET','POST'])
 def earth():
-    return render_template("earth.html")
+    ex = "Welcome to NASA Landsat Imagery"
+    return render_template("earth.html",ex = ex)
 if __name__=="__main__":
     app.run(debug = True)
