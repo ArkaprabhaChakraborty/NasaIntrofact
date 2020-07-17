@@ -1,0 +1,126 @@
+<html>
+   <link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+   <link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+   <style type="text/css" id="dark-mode-custom-style"></style>
+   <head>
+   <meta name="viewport" content="width=device-width, minimum-scale=0.1">
+   <title>Welcome to EPIC view</title>
+   <style>
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+body {
+  background-color: black;
+}
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centeredtexts {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 200px;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color:  #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color:  #008CBA;
+  color: white;
+}
+input[type=text] {
+  width: 100%;
+  padding: 20px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  font-size: 30px;
+}
+
+input[type=text]:focus {
+  border: 10px solid #555;
+}
+.button {
+  border: 10px solid #008CBA;
+  color: #008CBA;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-color: black;
+}
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 30px 50px 0 rgba(0,0,0,0.19);
+  background-color:  #008CBA;
+  color: #ddd;
+}
+.semi-transparent-button {
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 8px;
+  top: 60%;
+  left:29%;
+  width: 100%;
+  max-width: 875px;
+  background: #fff; /* fallback color for old browsers */background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+  font-size: 50px;
+}
+</style>
+   </head>
+   <body style="margin: 0px; background: #0e0e0e;" data-gr-c-s-loaded="true">
+   
+   <div class="topnav">
+  <a href = "/">Home</a>
+  <a class="active" href="/epic">EPIC</a>
+  <a href="/earth">Earth</a>
+  <a href="#about">About</a>
+  </div>
+  <div class="container">
+    <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;" src="https://i.pinimg.com/originals/f8/1f/42/f81f428f7102eb9a3fe12430fbfacad8.jpg" width="2000" height="1256">
+    <div class="centeredtexts"><font family="Monaco" size="100px" color = "White"><p>NASA Epic</p>
+    <p> Uniquely positioned at the Earth-Sun Lagrange point, EPIC provides full disc imagery of the Earth and captures unique perspectives of certain astronomical events such as lunar transits using a 2048x2048 pixel CCD (Charge Coupled Device) detector coupled to a 30-cm aperture Cassegrain telescope.</p>
+    </font></div>
+        <a class="semi-transparent-button" href="/epicdata">See what we've got -></a>
+   </div>
+   </body>
+</html>
