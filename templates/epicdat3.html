@@ -1,3 +1,4 @@
+{%extends "navbar.html"%}
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,10 +36,11 @@ a:hover {
 
 </style>
 </head>
+{%block body%}
 <body bgcolor = "Black">
 <a href="/epicdata2" class="previous round">&#8249;</a>
 <img src = {{img}}> 
 <a href="/epicdata4" class="next round">&#8250;</a>
-  
+{%endblock%}
 </body>
 </html> 
