@@ -34,7 +34,14 @@ def alpha():
     return render_template("epic.html")
 @app.route("/epicdata")
 def beta():
-    url = str("https://api.nasa.gov/archive/EPIC/archive/natural/2020/07/18/png/epic_1b_20200712010437.png?api_key="+key)
-    return redirect("https://epic.gsfc.nasa.gov/")
+    date = "2020/07/16"
+    data = requests.get("https://api.nasa.gov/EPIC/api/natural/images?api_key="+key)
+    data  = data.json()
+    dat = data[0] 
+    tad = data[1]
+    adt = data[2]
+    img = dat['image']
+    url = "https://api.nasa.gov/EPIC/archive/natural/2020/07/16/png/"+img+".png?api_key="+key
+    return render_template("epicdat.html",img = url)
 if __name__=="__main__":
     app.run(debug = True)
