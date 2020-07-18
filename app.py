@@ -51,16 +51,16 @@ def gamma():
     url = "https://api.nasa.gov/EPIC/archive/natural/2020/07/16/png/"+img+".png?api_key="+key
     return render_template("epicdat1.html",img = url)
 @app.route("/epicdata2")
-def beta():
+def delta():
     date = "2020/07/16"
     data = requests.get("https://api.nasa.gov/EPIC/api/natural/images?api_key="+key)
     data  = data.json()
-    adt = dat[2]
+    adt = data[2]
     img = adt['image']
     url = "https://api.nasa.gov/EPIC/archive/natural/2020/07/16/png/"+img+".png?api_key="+key
     return render_template("epicdat2.html",img = url)
 @app.route("/epicdata3")
-def beta():
+def lamb():
     date = "2020/07/16"
     data = requests.get("https://api.nasa.gov/EPIC/api/natural/images?api_key="+key)
     data  = data.json()
@@ -69,7 +69,7 @@ def beta():
     url = "https://api.nasa.gov/EPIC/archive/natural/2020/07/16/png/"+img+".png?api_key="+key
     return render_template("epicdat3.html",img = url)
 @app.route("/epicdata4")
-def beta():
+def zeta():
     date = "2020/07/16"
     data = requests.get("https://api.nasa.gov/EPIC/api/natural/images?api_key="+key)
     data  = data.json()
