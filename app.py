@@ -37,11 +37,45 @@ def beta():
     date = "2020/07/16"
     data = requests.get("https://api.nasa.gov/EPIC/api/natural/images?api_key="+key)
     data  = data.json()
-    dat = data[0] 
-    tad = data[1]
-    adt = data[2]
+    dat = data[0]
     img = dat['image']
     url = "https://api.nasa.gov/EPIC/archive/natural/2020/07/16/png/"+img+".png?api_key="+key
     return render_template("epicdat.html",img = url)
+@app.route("/epicdata1")
+def gamma():
+    date = "2020/07/16"
+    data = requests.get("https://api.nasa.gov/EPIC/api/natural/images?api_key="+key)
+    data  = data.json()
+    tad = data[1]
+    img = tad['image']
+    url = "https://api.nasa.gov/EPIC/archive/natural/2020/07/16/png/"+img+".png?api_key="+key
+    return render_template("epicdat1.html",img = url)
+@app.route("/epicdata2")
+def beta():
+    date = "2020/07/16"
+    data = requests.get("https://api.nasa.gov/EPIC/api/natural/images?api_key="+key)
+    data  = data.json()
+    adt = dat[2]
+    img = adt['image']
+    url = "https://api.nasa.gov/EPIC/archive/natural/2020/07/16/png/"+img+".png?api_key="+key
+    return render_template("epicdat2.html",img = url)
+@app.route("/epicdata3")
+def beta():
+    date = "2020/07/16"
+    data = requests.get("https://api.nasa.gov/EPIC/api/natural/images?api_key="+key)
+    data  = data.json()
+    adt = data[3]
+    img = adt['image']
+    url = "https://api.nasa.gov/EPIC/archive/natural/2020/07/16/png/"+img+".png?api_key="+key
+    return render_template("epicdat3.html",img = url)
+@app.route("/epicdata4")
+def beta():
+    date = "2020/07/16"
+    data = requests.get("https://api.nasa.gov/EPIC/api/natural/images?api_key="+key)
+    data  = data.json()
+    dat = data[4] 
+    img = dat['image']
+    url = "https://api.nasa.gov/EPIC/archive/natural/2020/07/16/png/"+img+".png?api_key="+key
+    return render_template("epicdat4.html",img = url)
 if __name__=="__main__":
     app.run(debug = True)
